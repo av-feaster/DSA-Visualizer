@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Searching.css" />
+    <link rel="icon" href="../icon/favico.ico" type="image/x-icon">
+    <title>Searching</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-container">
+            <!-- logo -->
+            <div class="menu-logo"> Searching </div>
+
+            <!-- menu items -->
+            <div class="menu">
+                <ul>
+                    <!-- <li>
+              <a href="#home"> Searching </a>
+            </li> -->
+                     <ul id="inputSzSpd">
+                    <li>
+                        Array Size:<input id="size" type="range" min="1" max="100" value="50" />
+                    </li>
+                    <li>
+                        Speed:<input id="speed" type="range" min="20" max="300" stepDown=10 value=60>
+                    </li>
+                </ul>
+                    <li>
+                        Key
+                        <input class="istyle" type="number" id="inputkey" value="1" onchange="updateKey(this.value)" />
+                    </li>
+                </ul>
+                <ul>
+                    <ul id="shuffle"><li onclick="shuffle(1)">Shuffle</li><li onclick="shuffle(2)">Arrange</li></ul>
+                    <li onclick="binarySearch()">BinarySearch</li>
+                    <li onclick="linearSearch()">LinearSearch</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="vertical container">
+            <div class="Array">
+                <div id="box">
+
+                </div>
+            </div>
+            <div class="Key" id="key"> KEY :
+                <h4 id="key-v"></h4>
+            </div>
+            
+            <div class="Result " >
+            <p>Result-</p>
+                <span id="innerRes"></span><div class="Info"></div>
+               
+            </div>
+        </div>
+
+        <div class="vertical Code">
+            <div id="CP" >
+
+            </div>
+           
+        </div>
+
+
+        
+    </main>
+    <footer>
+        <span id="footer"></span><br>
+        <span id="footer" style="color:beige;font-style: italic;vertical-align:baseline;position: relative;font-size: smaller;float:end;left:50% ">-A part of DSA-Visualizer</span>
+    </footer>
+    <script type="text/javascript" src="script.js">
+        JS
+    </script>
+    
+    
+</body>
+
+
+</html>

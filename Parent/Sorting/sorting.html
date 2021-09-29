@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../icon/favico.ico" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel=stylesheet>
+</head>
+<body>
+    <Header>
+    <div class="container" id="NavBar">
+        <h1 class="text-center">Sorting Visualizer</h1> 
+
+    </div>
+    <nav class="navbar navbar-light bg-light">
+           
+          <button class="btn btn-outline-success" type="button" onclick=newArray()>New Array</button>
+        
+             Size:
+            <input id="array_size" type="range" min="50" max="200" class="slider" value="50">
+            <div id="arrayValue"></div>
+             Speed:
+             <input id="sort_speed" class="slider" type="range" min="10" max="800" stepDown=10 value=60>
+            <div id="selectSpeed"></div>
+           
+       
+          <div class class="text-right">
+            <button class="btn  btn-outline-success " type="button" onclick=bubbleSort()>Bubble </button>&nbsp;
+            <button class="btn   btn-outline-success " type="button" onclick=selectionSort()>Selection</button>&nbsp;
+            <button class="btn   btn-outline-success " type="button" onclick=insertionSort()>Insertion</button>&nbsp;
+            <button class="btn   btn-outline-success " type="button" onclick=mergesort()>Merge</button>&nbsp;
+            <button class="btn   btn-outline-success   " type="button" onclick=qSort()>Quick</button>&nbsp;
+        </div>
+   
+    </nav>
+    </Header>
+    <main>
+    <div  id="main">
+    <div  id="Bars" class="flex-container"></div>
+    <div class="info"> </div>
+</div>
+<br>
+    
+</main>
+
+<footer>
+    <span id="footer">
+        <p>Created with</p>
+        <a target="_blank" href="https://github.com/av-feaster/DSA-Visualizer.git" ><span class="heart heart--hover"></span></a>
+        <p style="font-size: x-small;">-"A part of DSA-Visualizer"</p>
+    </span>
+
+
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script  src="./scripts/main.js"> </script>
+    <script src='./scripts/bubblesort.js'></script>
+    <script src='./scripts/insertion.js'>Amit_Aman</script>
+    <script src='./scripts/qsort.js'>Amit_Aman</script>
+    <script src='./scripts/selectionsort.js'>Amit_Aman</script>
+    <script src='./scripts/mergesort.js'>Amit_Aman</script>
+
+  
+</body>
+
+</html>
