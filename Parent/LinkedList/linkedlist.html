@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="linkedlist.css" />
+    <link rel="icon" href="../icon/favico.ico" type="image/x-icon" />
+    <title>Linked List Visualizer</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu-container">
+        <div class="menu-logo">Linked List Visualizer</div>
+        <div class="menu">
+          <ul>
+            <li>
+              <input type="number" id="nodeValue" placeholder="Enter value" />
+            </li>
+            <li>
+              <input
+                type="number"
+                id="position"
+                placeholder="Position (optional)"
+              />
+            </li>
+            <li onclick="insertAtEnd()">Insert at End</li>
+            <li onclick="insertAtStart()">Insert at Start</li>
+            <li onclick="insertAtPosition()">Insert at Position</li>
+            <li onclick="searchNode()">Search</li>
+            <li onclick="reverseList()">Reverse List</li>
+          </ul>
+          <ul>
+            <li onclick="deleteFromStart()">Delete from Start</li>
+            <li onclick="deleteFromEnd()">Delete from End</li>
+            <li onclick="deleteAtPosition()">Delete at Position</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div id="list-container"></div>
+        <div id="list-stats" class="stats"></div>
+        <div class="info">
+          <div id="operation-info"></div>
+        </div>
+        <div class="btn-group">
+          <button class="btn" onclick="clearList()">Clear List</button>
+          <button class="btn" onclick="generateRandomList()">
+            Generate Random List
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span id="footer">
+        <p>Created with</p>
+        <a
+          target="_blank"
+          href="https://github.com/av-feaster/DSA-Visualizer.git"
+          >❤</a
+        >
+        <p style="font-size: x-small">-"A part of DSA-Visualizer"</p>
+      </span>
+    </footer>
+    <script src="linkedlist.js"></script>
+  </body>
+</html>
