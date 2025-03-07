@@ -98,6 +98,7 @@ input {
     font-weight: bold;
     transition: all 0.3s ease;
     animation: fadeIn 0.5s ease;
+    z-index: 2;
 }
 
 .node.highlight {
@@ -112,6 +113,7 @@ input {
     height: 2px;
     transform-origin: left center;
     transition: width 0.5s ease;
+    z-index: 1;
 }
 
 .info {
