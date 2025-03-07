@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tree.css" />
+    <link rel="icon" href="../icon/favico.ico" type="image/x-icon" />
+    <title>Tree Visualizer</title>
+</head>
+<body>
+    <header>
+        <nav class="menu-container">
+            <div class="menu-logo">Binary Tree Visualizer</div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <input type="number" id="nodeValue" placeholder="Enter value" />
+                    </li>
+                    <li onclick="insertNode()">Insert</li>
+                    <li onclick="deleteNode()">Delete</li>
+                    <li onclick="searchNode()">Search</li>
+                </ul>
+                <ul>
+                    <li onclick="inorderTraversal()">Inorder</li>
+                    <li onclick="preorderTraversal()">Preorder</li>
+                    <li onclick="postorderTraversal()">Postorder</li>
+                    <li onclick="clearTree()">Clear Tree</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="tree-container"></div>
+            <div class="info">
+                <div id="traversal-info"></div>
+                <div id="operation-info"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span id="footer">
+            <p>Created with</p>
+            <a target="_blank" href="https://github.com/av-feaster/DSA-Visualizer.git">❤</a>
+            <p style="font-size: x-small">-"A part of DSA-Visualizer"</p>
+        </span>
+    </footer>
+    <script src="tree.js"></script>
+</body>
+</html> 

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=McLaren&display=swap");
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdcdcd;
+    overflow-x: hidden;
+}
+
+.menu-container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: #232323;
+    color: #cdcdcd;
+    padding: 10px 20px;
+    z-index: 1;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.menu-logo {
+    font-family: "McLaren";
+    font-size: 20pt;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu li {
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.menu li:hover {
+    color: #00c6a7;
+}
+
+input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 150px;
+}
+
+.container {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+}
+
+#tree-container {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    overflow: auto;
+}
+
+.node {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #232323;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.node.highlight {
+    background: #00c6a7;
+    color: white;
+    transform: scale(1.1);
+}
+
+.edge {
+    position: absolute;
+    background: #232323;
+    height: 2px;
+    transform-origin: left center;
+    transition: width 0.5s ease;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #232323;
+    color: #cdcdcd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #232323;
+    color: #cdcdcd;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "McLaren";
+}
+
+footer a {
+    text-decoration: none;
+    color: #00c6a7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 1200px) {
+    .menu-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        margin-top: 160px;
+    }
+} 
